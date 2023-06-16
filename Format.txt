@@ -1,1 +1,54 @@
-hello i removed everything to just test
+fiserv/dfm/filename
+
+filename like -- CL9DFMDE.34806.NAGW-
+
+OPJMB001.497960027884.d.20201015.dfm.2022
+
+0415.gz (these are paysafe files)
+
+New: encrypt/fiserv/north/ps
+----------------------------------------------
+fiserv/dfm/filename
+
+filename like --
+
+FS_{record_type}_<yyyymmdd>_38174.txt
+
+(these are wholesale files start with FS_).
+
+Added Everything Back
+
+Record_type like --
+
+Detail_Adjustments,
+
+Detail_Credit_Funded,
+
+Detail_Credit_Nonfunded etc.
+
+New: encrypt/fiserv/north/ep
+--------------------------------------------
+
+fis/emaf/filename
+
+encrypt/ fis/core/filename
+
+-------------------------------------
+fis/litle/filename
+
+encrypt/ fis/ecom/filename
+
+-----------------------------------------
+fis/deposits/filename
+
+encrypt/settlement/filename
+
+-----------------------------------------
+fis/ach/filename
+
+encrypt/settlement/filename
+
+-----------------------------------------
+billing_data/filename
+
+encrypt/billing/filename
