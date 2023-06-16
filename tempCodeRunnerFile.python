@@ -1,0 +1,43 @@
+import re
+def change_file_name_to_new_format(key):
+    # if 'fiserv/dfm/' or 'CL9DFMDE.34806.NAGW' in key:
+    #     return 
+    
+    if 'fis/emaf/' in key:
+        return re.sub(r'fis/emaf/','encrypt/fis/core/',key)
+
+    elif 'fis/litle/' in key:
+        return re.sub(r'fis/litle/','encrypt/fis/ecom/',key)
+
+    elif 'fis/deposits/' in key:
+        return re.sub(r'fis/deposits/','encrypt/settlement/',key)
+    
+    elif 'fis/ach/' in key:
+        return re.sub('fis/ach/','encrypt/settlement/',key)
+    
+    elif 'billing_data/' in key:
+        return re.sub('billing_data/','encrypt/billing/',key)
+        
+print(list(map(change_file_name_to_new_format,['billing_data/FILE1.csv','fis/deposits/FILE2.csv','fis/ach/FILE3.csv','fis/emaf/FILE4.csv'])))
+print('-----------------------------------------------------------------------------------------------------------')
+import re
+def change_file_name_to_new_format1(key):
+    # if 'fiserv/dfm/' or 'CL9DFMDE.34806.NAGW' in key:
+    #     return 
+    
+    if 'fis/emaf/' in key:
+        return 'encrypt/fis/core/' + key.split('/')[-1]
+
+    elif 'fis/litle/' in key:
+        return 'encrypt/fis/ecom/' + key.split('/')[-1]
+
+    elif 'fis/deposits/' in key:
+        return 'encrypt/settlement/' + key.split('/')[-1]
+    
+    elif 'fis/ach/' in key:
+        return 'encrypt/settlement/' + key.split('/')[-1]
+    
+    elif 'billing_data/' in key:
+        return 'encrypt/billing/' + key.split('/')[-1]
+        
+print(list(map(change_file_name_to_new_format1,['billing_data/FILE1.csv','fis/deposits/FILE2.csv','fis/ach/FILE3.csv','fis/emaf/FILE4.csv'])))
